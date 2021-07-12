@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore', message='Unverified HTTPS request')
 class custom_search:
     def __init__(self,query):
         self.query = query
-        self.url='https://customsearch.googleapis.com/customsearch/v1?cx=58ce1194b1c255cfb&q='+quote(self.query)+'&gl=fr&key=AIzaSyDHmj66uOLMdm25lPwg6amIrAxSmjdEm-o'
+        self.url='https://customsearch.googleapis.com/customsearch/v1?cx=58ce1194b1c255cfb&q='+quote(self.query)+'&gl=fr&key=Insert API KEY HERE'
         self.tripadvisor=None
         self.hotels=None
         self.hrs=None
