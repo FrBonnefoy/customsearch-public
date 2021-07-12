@@ -8,7 +8,7 @@ class searcher:
     def __init__(self,item):
         self.item=item
         search=urllib.parse.quote_plus(self.item)
-        qpage="https://maps.googleapis.com/maps/api/geocode/json?address="+search+"&language=fr&key=AIzaSyCRhsmBuJsrZtU7aXHb1aFucxDptJu0gdk"
+        qpage="https://maps.googleapis.com/maps/api/geocode/json?address="+search+"&language=fr&key=INSERT API KEY HERE"
         query=urlreq.urlopen(qpage)
         self.data=query.read().decode('utf-8').replace('(','[').replace(')',']')
 
@@ -16,7 +16,7 @@ class searcher_detail:
     def __init__(self,item):
         self.item=item
         search=urllib.parse.quote_plus(self.item)
-        qpage="https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input="+search+"&inputtype=textquery&fields=place_id,name,formatted_address&key=AIzaSyCRhsmBuJsrZtU7aXHb1aFucxDptJu0gdk"
+        qpage="https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input="+search+"&inputtype=textquery&fields=place_id,name,formatted_address&key=INSERT API KEY HERE"
         query=urlreq.urlopen(qpage)
         self.data=query.read().decode('utf-8').replace('(','[').replace(')',']')
 
